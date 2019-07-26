@@ -1,0 +1,1273 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ HTML5 display-role reset for older browsers 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*CSS reset end*/
+
+
+/* 共用設定 開始 */
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+	text-decoration: none;
+}
+
+.clearfix:after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
+.wrap{
+	max-width: 1024px;	
+	margin: 0 auto;
+	
+	position: relative;
+
+	background-color: #EFE9E7;
+
+	overflow: hidden;
+
+}
+.header, .footer, .yumSecret, .comment, 
+.body-product {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+/* 共用設定 結束 */
+
+
+
+
+/* 共用版型 開始 */
+
+/* header begin */
+
+.header{
+	width: 100%;
+	height: 56px;
+	background-color: rgba(0,0,0,0.75);
+	margin-bottom: 414px;
+	
+	position: relative;
+	z-index: 10;
+}
+
+.logo{
+	float: left;
+	margin: 16px;
+
+}
+
+.logo a{
+	display: block;
+	width: 120px;
+	height: 24px;
+	background-image: url(../assets/logo_w@svg.svg);
+
+	text-indent: 101%;
+	overflow: hidden;	
+	white-space: nowrap;
+	
+}
+
+.menu{
+	float: right;
+}
+
+.menu li{
+	float: left;
+	margin-right: 5px;
+		
+
+}
+
+.menu li a{
+	display: block;
+	width: 60px;
+	height: 56px;
+	/* 若未設高度，高度會有小數點 */
+	padding-top: 18px;
+	/* line-height: 51px; */
+	
+	text-align: center;
+	
+
+	color: #FFFFFF;
+}
+
+.menu li a:hover{
+	border-bottom: 5px solid #FF5E45;
+}
+
+
+/* header end */
+
+/* banner begin */
+
+
+
+.banner{
+	width: 100%;
+	height: 420px;	
+
+	position: absolute;
+	top: 0;
+
+	background-image: url(../assets/header_desktop.png);
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position: center ;
+	
+}
+
+.banner-text{
+	max-width: 460px;
+	height: auto;
+	background-color: rgba(0,0,0,0.35);
+	color: #FFFFFF;
+	text-align: center;
+
+	margin: 123px auto 0 auto;
+	padding: 20px;
+}
+
+.banner h2{
+	font-size: 36px;
+	margin-bottom: 16px;
+}
+
+.banner p{
+	line-height: 24px;
+
+}
+
+.banner i{
+	margin: 0 5px;
+}
+
+@media (max-width:767px){
+	.banner{
+		background-image: url(../assets/header_mobile.png);
+	}
+}
+
+
+/* banner end */
+
+
+/* footer begin */
+
+
+.footer{
+	padding-bottom: 42px;
+
+	
+}
+
+.footer h4{
+	font-size: 24px;
+	color: #3D1101;
+	
+		margin-bottom: 16px;
+}
+
+.footer p, .footer li{
+	line-height: 22px;
+	font-size: 16px;
+
+	color: #3D1101;
+
+	text-align: left;
+
+}
+
+.about{
+	float: left;
+	width: 33%;
+
+	margin-right: 21px;
+
+}
+
+.contact{
+	float: left;
+	width: 33%;
+
+}
+
+.contact li{
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-left: 5px;
+	
+	color: #3D1101;
+}
+
+.social{
+	float: right;
+
+}
+
+.social img{
+	display: block;
+	margin-bottom: 22px;
+}
+
+.social i{
+	font-size: 36px;
+
+	float: right;
+	margin-left: 11px;
+}
+
+.social .google{
+	color: #DB4437;
+
+}
+
+.social .twitter{
+	color: #41ABE1;
+
+}
+
+.social .facebook{
+	color:#3A5795;
+
+}
+
+@media (max-width:768px){
+	.about, .contact , .social{
+		width: 48%;
+		margin: 0 1% 30px 1%;
+
+	}
+
+}
+
+@media (max-width:767px){
+	.about, .contact , .social{
+		width: 98%;
+		margin: 0 1% 30px 1%;
+	}
+
+	.social i{
+		float: left;
+		margin: 0 11px 0 0;
+	}
+
+	.social img{
+		display: none;
+	}
+}
+
+/* footer end */
+
+/* aside begin */
+
+.showMenu, .closeMenu{
+	position: absolute;
+	right: 5%;
+	text-align: center;
+	font-size: 28px;
+	margin: 14px;
+
+	color: white;
+	display: none;
+}
+
+
+.aside{
+	position: absolute;
+	width: 230px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #EFE9E7;
+
+	z-index: 50;
+	transform: translateX(231px);
+	transition: all 1s;
+
+	border-left: 3px solid #FF5E45;
+
+}
+
+.aside.active{
+	transform: translateX(0px);
+}
+
+.closeMenu{
+	margin-bottom: 50px;
+	color: #3D1101;
+}
+
+.aside-menu{
+	margin-top: 70px;
+}
+
+.aside-menu a{
+	display: block;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	color:#3D1101;
+	font-weight: bold;
+
+}
+
+.aside-menu a:hover{
+	background-color: #FF5E45;
+}
+
+@media (max-width:768px){
+
+}
+
+@media (max-width:767px){
+	.showMenu, .closeMenu{
+		display: block;
+	}
+
+	.menu{
+		display: none;
+	}
+}
+
+
+
+/* aside end */
+
+/* 共用版型 結束 */
+
+
+
+
+
+/* Login頁 開始 */
+
+/* body begin */
+
+
+.body_login{
+	background-color: #EFE9E7;
+}
+.body_login img{
+	display: block;
+	margin: 0 auto;
+
+	margin-bottom: 5px;
+}
+
+.body_login p{
+	text-align: center;
+	font-size: 20px;
+	color: #3D1101;
+	font-weight: bold;
+
+	margin-bottom: 35px;
+}
+
+.loginForm{
+	width: 300px;
+	height: 273px;
+	border-top:3px solid #FF5E45;
+	/* border: 1px solid gray; */
+
+	margin: 0 auto 50px auto;
+	padding: 15px;
+
+	box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+	background-color: #EFE9E7;
+
+}
+
+.loginForm p{
+	font-size: 18px;
+	color: #3D1101;
+	font-weight: bold;
+	
+}
+
+.loginForm label{
+	font-size: 16px;
+	color: #3D1101;
+
+	margin-bottom: 3px;
+	margin-top: 15px;
+	display: block;
+}
+
+.loginForm-icon{
+	position: relative;
+}
+
+.loginForm-icon i{
+	position: absolute;
+	top: calc(50% - 0.5em);
+	left: 10px;
+
+	color: rgba(61,17,0,0.50);
+}
+
+.loginForm-icon input{
+	width: 100%;
+	height: 32px;
+	border-radius: 3px;
+
+	border: 1px solid #CCCCCC;
+
+	text-indent: 35px;
+}
+
+.loginForm a{
+	font-size: 14px;
+	color: #FF5E45;
+
+	display: block;
+	margin-bottom: 30px;
+	margin-top: 3px;
+
+}
+
+.loginForm input[type="submit"]{
+	border-radius: 3px;
+	color: #FFFFFF;
+}
+
+.loginForm input[type="submit"]:hover{
+	cursor: pointer;
+	box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+}
+
+.loginForm input[value="註冊"]{
+	float: left;
+	width: 125px;
+	height: 32px;
+
+	background-color: rgba(0,0,0,0.35);
+	border: none;
+
+
+}
+
+.loginForm input[value="登入"]{
+	float: right;
+	width: 125px;
+	height: 32px;
+
+	background-color: #F56C23;
+	border: none;
+}
+
+
+
+
+/* body end */
+
+/* Login頁 結束 */
+
+
+
+
+
+
+/* Index頁 開始 */
+
+/* yumSecret begin */
+
+
+
+
+.yumSecret{
+	margin-bottom: 50px;
+}
+
+.yumSecret img{
+	display: block;
+	width: 200px;
+	margin: 0 auto 20px auto;
+}
+
+.yumSecret-line{
+	
+	margin-bottom: 31px;
+	position: relative;
+	text-align: center;
+}
+.yumSecret-line p{
+
+	font-size: 20px;
+	line-height: 32px;
+
+	color: #3D1101;
+}
+
+.yumSecret-line:after,.yumSecret-line:before{
+
+	position: absolute;
+	top: 50%;
+	content: "";
+	height: 1px;
+	width: 20%;
+	
+	background-color: #979797;
+	
+}
+
+.yumSecret-line:after{
+	right: 15%;
+	
+}
+
+.yumSecret-line:before{
+	left: 15%;
+}
+
+.yumSecret h3{
+	text-align: center;
+	font-size: 18px;
+	color: #3D1101;
+	line-height: 32px;
+
+	margin-bottom: 11px;
+}
+
+.yumSecret-fix p{
+	text-align: left;
+
+	font-size: 16px;
+	line-height: 22px;
+	color: #3D1101;
+
+}
+
+.yumSecret-fix li{
+	float: left;
+
+	width: 29.33333%;
+	margin: 0 2% 0 2%;
+
+}
+
+.yumSecret img{
+	border-radius: 50%;
+
+}
+
+@media(max-width:767px){
+	.yumSecret-line:after,.yumSecret-line:before{
+		display: none;
+	}
+
+	.yumSecret-fix li{
+		width: 96%;
+		margin-bottom: 30px;
+	}
+}
+
+
+/* yumSecret end */
+
+/* chef begin */
+
+
+
+
+.chef{
+	background: #3D1101;
+	margin-bottom: 50px;
+}
+
+
+.chef-pic{
+	width: 49%;
+	height: 460px;
+	float: left;
+	background-image: url(../assets/main_chef_brown.png);
+	background-size: cover;
+	background-position: center;
+	margin-left: 1%;
+}
+
+.chef p{
+	float: right;
+	width: 50%;
+	color: #EFE9E7;
+
+	padding: 40px;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.chef span{
+	font-size: 20px;
+	line-height: 40px;
+}
+
+@media (max-width:767px){
+	.chef-pic{
+		width: 100%;
+		margin: 0;
+		
+	}
+
+	.chef p{
+		width: 100%;
+	}
+}
+
+
+
+
+/* chef end */
+
+/* comment begin */
+
+
+
+
+.comment p{
+	font-size: 24px;
+	color: #3D1101;
+	text-align: center;
+
+	margin-bottom: 32px;
+}
+
+.comment-zone li{
+	width: 33.33333%;
+	float: left;
+}
+
+.comment-zone img{
+	border-radius: 50%;
+
+	float: left;
+}
+
+.comment-zone p{
+	font-size: 16px;
+	color: #3D1101;
+	line-height: 24px;
+
+	float: left;
+	width: 70%;
+
+	padding: 18px;
+
+	text-align: left;
+
+}
+
+
+
+.comment-zone-header{
+	display: block;
+	line-height: 24px;
+}
+
+.comment-zone-footer{
+	display: block;
+	text-align: right;
+
+	color: rgba(61,17,0,0.75);
+	line-height: 24px;
+}
+
+@media(max-width:767px){
+	.comment-zone li{
+		width: 100%;
+	}
+
+}
+
+
+
+/* comment end */
+
+/* booking begin */
+
+
+
+.booking{
+	margin-bottom: 50px;
+	background-color: rgba(250,250,250,0.70);
+	padding: 50px;
+}
+
+.booking p{
+	font-size: 24px;
+	color: #3D1101;
+	text-align: center;
+	line-height: 32px;
+
+	margin-bottom: 38px;
+}
+
+.booking-map{
+	width: 50%;
+	background-image: url(../assets/Map.png);
+	height: 388px;
+	background-position: center;
+	background-size: cover;
+	float: left;
+}
+
+.booking-form{
+	width: 50%;
+	float: right;
+	padding-left: 20px;
+}
+
+.booking-form label{
+	display: block;
+	margin-bottom: 11px;
+
+	font-size: 14px;
+
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="tel"],
+.booking-form input[type="email"],
+.booking-form input[type="number"]{
+	margin-bottom: 12px;
+	width: 100%;
+	height: 32px;
+	text-indent: 15px;
+
+	border-radius: 3px;
+	border: 1px solid #CCCCCC;
+	box-shadow: inset 0px 1px 0px 0px #ECECEC;
+}
+
+.Vegetarian p{
+	font-size: 14px;
+	text-align: left;
+
+	margin-bottom: 10px;
+
+}
+
+.Vegetarian label{
+	display: inline;
+	vertical-align: middle;
+
+}
+
+.Vegetarian input[type="radio"]{
+	margin-top: 1px;
+	margin-right: 30px;
+	vertical-align: middle;
+
+}
+
+.booking-form-btn{
+	float: right;
+	margin-top: 24px;
+
+
+}
+
+.booking-form-btn input[type="reset"],
+.booking-form-btn input[type="submit"]{
+	width: 70px;
+	height: 32px;
+	border: none;
+	border-radius: 3px;
+
+	color: #FFFFFF;
+	cursor: pointer;
+
+}
+
+.booking-form-btn input[type="reset"]{
+
+	background-color:rgba(0,0,0,0.35);
+
+	margin-right: 11px;
+
+}
+
+.booking-form-btn input[type="submit"]{
+
+	background-color: #F56C23;
+}
+
+.booking-form-btn input[type="reset"]:hover,
+.booking-form-btn input[type="submit"]:hover{
+	background-color: #3D1101;
+}
+
+
+@media (max-width:768px){
+	.booking{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media (max-width:767px){
+	.booking-map{
+		width: 100%;
+		background-size: contain;
+		margin-bottom: 30px;
+	}
+	.booking-form{
+		width: 100%;
+		padding-left: 0;
+	}
+}
+
+
+
+
+
+/* booking end */
+
+/* Index頁 結束 */
+
+
+
+
+/* product頁 開始 */
+
+/* sidebar begin */
+
+
+
+.sidebar{
+	width: 20%;
+	float: left;
+	margin-right: 5%;
+}
+
+.sidebar-title{
+	margin-bottom: 16px;
+}
+
+.sidebar-title p{
+	font-size: 20px;
+	color: #3D1101;
+	line-height: 32px;
+
+	text-align: center;
+}
+
+.sidebar-title i{
+	font-size: 20px;
+	color: #3D1101;
+	line-height: 32px;
+
+	margin-right: 15px;
+
+}
+
+.sidebar-body li{
+	font-size: 16px;
+	color: #3D1101;
+	line-height: 32px;
+
+	border-bottom: 1px solid #3D1101;
+
+	cursor: pointer;
+}
+
+.sidebar-body li:hover{
+	background-color: #3D1101;
+	color: #FFFFFF;
+}
+
+
+/* sidebar end */
+
+/* content begin */
+	/* content-header begin */
+
+
+
+
+
+.content{
+	width: 75%;
+	float: right;
+
+	margin-bottom: 50px;
+}
+
+.content-header{
+	margin-bottom: 26px;
+}
+
+.searchbar{
+
+	background-color: orange;
+}
+
+.searchbar a{
+	display: block;
+	width: 36px;
+	height: 32px;
+	background-color: #3D1011;
+
+
+	color: #FFFFFF;
+	padding: 7px;
+	font-size: 19px;
+
+	float: left;
+
+}
+
+.searchbar input{
+	height: 32px;
+	width: 424px;
+	border: 2px solid #3D1101;
+
+
+	float: left;
+
+
+}
+
+.cart{
+	float: right;
+
+	margin-top: 5px;
+}
+
+.cart-pay{
+	font-size: 16px;
+	float: left;
+	border-right: 1px solid #3D1011;
+
+	margin-right: 12px;
+
+	padding: 0 20px 0 0;
+	margin-top: 5px;
+
+	color: #3D1011;
+
+}
+
+.cart-icon{
+	display: block;
+	font-size: 27px;
+	padding-bottom: 10px;
+	color: #3D1011;
+	float: right;
+
+	margin-left: 12px;
+
+}
+
+
+@media (max-width:768px){
+	.cart{
+		margin-top: 30px;
+	}
+
+}
+
+@media (max-width:767px) {
+	.sidebar{
+		width: 100%;
+		float: none;
+		margin-right: 0;
+		margin-bottom: 40px;
+	}
+
+	.content{
+		width: 100%;
+		float: none;
+	
+		margin-bottom: 50px;
+	}
+
+	.searchbar{
+		margin: 0 auto;
+	}
+
+	.searchbar input{
+		width: 93%;
+	}
+
+	.searchbar a{
+		width: 7%;
+		text-align: center;
+	}
+
+}
+
+@media (max-width:568px){
+	.searchbar input{
+		width: 88%;
+	}
+
+	.searchbar a{
+		width: 12%;
+	}
+}
+
+
+	/* content-header end */
+
+	/* content-body begin */
+
+
+
+.productList li{
+
+	background-color: #EFE9E7;
+	width: 31.33333%;
+
+	box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+	float: left;
+	
+	margin-bottom: 30px;
+
+	/* ↓ for ribbon */
+	position: relative;
+}
+
+.productList-fix{
+	margin: 0 2% 0 2%;
+}
+
+.productList img{
+	margin-bottom: 11px;
+	width: 100%;
+
+}
+
+.productList h3, .productList p{
+	text-align: center;
+	color: #3D1011;
+
+}
+
+.productList h3{
+	margin-bottom: 3px;
+}
+
+.productList h3, .productList .price{
+	font-size: 20px;
+}
+
+.line p{
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.productList .price{
+	margin-bottom: 13px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.addCart{
+	display: block;
+	width: 90%;
+	height: 28px;
+	text-align: center;
+	border: 2px solid #FF5E45;
+	border-radius: 3px;
+	margin: 0 5% 5% 5%;
+	padding: 4px 0 4px 0;
+	color: #FF5E45;
+
+}
+
+.addCart i{
+	margin-right: 7px;
+}
+
+.addCart:hover{
+	border: 2px solid #3D1101;
+	color: #3D1101;
+
+
+}
+
+.line{
+	position: relative;
+	margin-bottom: 20px;
+}
+
+
+.line p:after, .line p:before{
+	position: absolute;
+	top: 120%;
+	content: "";
+	height: 1px;
+	width: 15%;
+	
+	background-color: #3D1011;
+}
+
+.line p:after{
+	right: 50%;
+
+}
+
+.line p:before{
+	left: 50%;
+}
+
+
+
+.heart{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+
+	font-size: 23px;
+	color: #FFFFFF;
+
+	cursor: pointer;
+	z-index: 50;
+}
+
+.ribbon{
+	width: 200px;
+	padding: 10px 0;
+	background-color: #00CC99;
+	font-size: 14px;
+	text-align: center;
+	color: #FFFFFF;
+	transform: rotate(45deg);
+
+	position: absolute;
+	top: 10px;
+	right: -75px;
+
+	z-index: 1;
+}
+
+.ribbon-trim{
+	position: absolute;
+
+	width: 216.58px;
+	height: 200px;
+
+	overflow: hidden;
+
+	top: -10px;
+	right: -10px;
+}
+
+.ribbon-trim:before, .ribbon-trim:after{
+	position: absolute;
+	content: '';
+	display: block;
+	border: 5px solid #078F6D;
+
+}
+
+.ribbon-trim:before{
+	top: 33%;
+	right: 0;
+}
+
+.ribbon-trim:after{
+	top: 0px;
+	right: 30.5%;
+}
+
+@media (max-width:768px) {
+	.productList-fix{
+		margin: 0;
+	}	
+	.productList li{
+		width: 46%;
+		margin: 0 2% 0 2%;
+		margin-bottom: 30px;
+
+	}
+
+
+}
+
+@media (max-width:767px) {
+	.productList li{
+		width: 60%;
+		margin: 0 20% 50px 20%;
+
+	}
+}
+
+@media (max-width:568px) {
+	.productList li{
+		width: 98%;
+		margin: 0 1% 50px 1%;
+
+	}
+}
+
+
+
+
+	/* content-body end */
+
+/* content end */
+/* product頁 結束 */
+
+
+
